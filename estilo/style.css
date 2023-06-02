@@ -1,0 +1,100 @@
+@charset "utf-8"; /*declaração inical da folha de estilo, não esquecer novamente de indicar utf-8 entre aspas duplas. */
+
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Srisakdi&display=swap');
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans serif;/*declaração de variavel no css para inserção de fontes*/
+    --fonte2:  'Passions Conflict', cursive;
+    --fonte3: 'Srisakdi', cursive;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+} /*configurações gerais para resetar todos os elementos para configuração durante o desenvolvimento do site, seção por seção*/
+html, body{
+    font-family: var(--fonte1);
+   min-height: 100vh; /*Tamanho mínimo do meu html e body é 100% da viewport height(" altura espessura")*/
+    background-color: darkgray;   
+}
+header{
+background-color: black;
+color: white;
+text-align: center;
+font-family: var(--fonte1);
+}/*configurando estilo do cabeçalho da página*/
+header > h1{
+      font-family: var(--fonte2); /*para colocar a variavel da fonte na fonte selecionada basta declarar "font-family: var"  e selecionar a desejada.*/
+    font-size: 10vw;/*tamanho da fonte view weight.*/
+    padding-top: 50px; /*(espaçamento superior em relação ao cabeçalho)*/
+    text-decoration: small-caps ;/*tranformando o texto de h1 em todas maiúsculas, e as letras inicias das palavras maiores que o restante das outras letras*/
+}
+header > p{
+    padding-bottom: 50px;/*configuração do espaçamento inferior ao cabeçalho */
+}
+header  a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+} /*configuração do link, cor do mesmo e o seu peso em negrito*/
+
+header a:hover, footer a:hover{
+text-decoration: underline;
+}/*configuração ao passar com o mouse sobre o link. Ao passar, ficará sublinhado*/
+
+section{
+    padding-top: 10vh;/*espaçamento superior 10% da altura da tela*/
+    padding-bottom: 10vh/*configuração para as sections como um todo*/
+    line-height 2em; /*espaçamento entre as linhas*/
+    padding-left: 30px; /*colocando texto da seleção mais afastado da borda esquerda*/
+    font-size:3.5vh; /*tamanho percentual em relação à tela*/
+}
+section > p{
+    padding-bottom: 2em; /*espaçamento entre as estrofes*/
+}
+section.normal{
+background-color: white;
+color: black;
+font-family: var(--fonte2);
+font-size: 3em;
+font-weight: normal;
+}/*configuração da seção normal*/
+
+section.imagem{
+background-color: rgba(28, 27, 27, 0.361);
+color: white;
+box-shadow: inset 6px 6px 13px 0px black; /*sombra na caixa seção imagem*/
+background-size: cover;
+background-attachment: fixed; /*Efeito parallax - fixação de*/
+
+}/*configuração da seção imagem*/
+
+section.imagem > p{
+    font-family: var(--fonte3);
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(23, 22, 22, 0.431);/*configurando a area do texto ( interna do section*/
+    text-shadow: 2px 2px black; /*sombra no texo superior e inferior preto*/
+    
+}
+    
+
+section#img01{
+background-image: url('../imagens/background003.jpg');
+background-position: right center;
+
+}
+section#img02{
+background-image: url('../imagens/background002.jpg');
+
+background-size: cover;
+}/*inserção de imagem como plano de fundo na seção.
+A imagem inserida irá se adaptar de modo que exiba ela toda*/
+
+footer{
+    color: rgb(238, 227, 15);
+   background-color:black;
+   text-align: center;
+   padding: 10px;
+
+}
